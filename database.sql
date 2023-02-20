@@ -23,14 +23,8 @@ CREATE TABLE
         address VARCHAR(200) NOT NULL,
         City VARCHAR(50) NOT NULL,
         Contry VARCHAR(50) NOT NULL,
-        category ENUM('sale', 'rent') NOT NULL,
-        type ENUM(
-            'apartment',
-            'house',
-            'villa',
-            'office',
-            'land'
-        ) NOT NULL,
+        category VARCHAR(50)  NOT NULL,
+        type VARCHAR(50)  NOT NULL,
         client_id INT NOT NULL,
         PRIMARY KEY(ad_id),
         FOREIGN KEY(client_id) REFERENCES Client(client_id)
